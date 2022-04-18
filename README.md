@@ -2,6 +2,10 @@
 
 Gatsby plugin Appointlet Button for adding your booking page to your website.
 
+### Changelog
+
+**More informations in [`HISTORY.md`](https://github.com/NovaGaia/gatsby-plugin-appointlet/blob/main/HISTORY.md)**
+
 ## Installation
 
 Use this commmand `npm i --save gatsby-plugin-appointlet` or `yarn install gatsby-plugin-appointlet`
@@ -23,6 +27,19 @@ module.exports = {
 }
 ```
 
-Add import to yout file :
+Add import to your file :
 
 `import AppointletButton from 'gatsby-plugin-appointlet'`
+
+Add component to your file :
+
+```javascript
+<AppointletButton tag="div" className="btn btn-primary gap-2">
+  <FaCalendarCheck />
+  <span>Prenez rendez-vous</span>
+</AppointletButton>
+```
+
+You can set the type of component when you set the `tag` attribute. By default, the component is a `button`.
+
+Every attributes set will be add to `AppointletButton`|`button`.

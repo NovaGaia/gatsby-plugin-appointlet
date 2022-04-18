@@ -43,17 +43,37 @@ var scriptAppointlet = /*#__PURE__*/_react.default.createElement("script", {
 }); // <link href="https://js.appointlet.com/styles.css" rel="stylesheet" />
 
 
-var styleAppointlet = /*#__PURE__*/_react.default.createElement("style", {
+var styleAppointlet = /*#__PURE__*/_react.default.createElement("link", {
   key: 'styleAppointlet',
   id: 'styleAppointlet',
   rel: 'stylesheet',
   href: '//js.appointlet.com/styles.css'
-});
+}); // Lighthouse recommends pre-connecting
+
+
+var preconnectStyleAppointlet = ( /*#__PURE__*/_react.default.createElement("link", {
+  rel: "preconnect",
+  key: "preconnect-style-appointlet",
+  href: "//js.appointlet.com/styles.css"
+}), /*#__PURE__*/_react.default.createElement("link", {
+  rel: "dns-prefetch",
+  key: "dns-prefetch-style-appointlet",
+  href: "//js.appointlet.com/styles.css"
+}));
+var preconnectScriptAppointlet = ( /*#__PURE__*/_react.default.createElement("link", {
+  rel: "preconnect",
+  key: "preconnect-script-appointlet",
+  href: "//js.appointlet.com"
+}), /*#__PURE__*/_react.default.createElement("link", {
+  rel: "dns-prefetch",
+  key: "dns-prefetch-script-appointlet",
+  href: "//js.appointlet.com"
+}));
 
 var onRenderBody = function onRenderBody(_ref) {
   var setPostBodyComponents = _ref.setPostBodyComponents,
       setHeadComponents = _ref.setHeadComponents;
-  setHeadComponents([scriptAppointlet, styleAppointlet]);
+  setHeadComponents([preconnectStyleAppointlet, preconnectScriptAppointlet, scriptAppointlet, styleAppointlet]);
   setPostBodyComponents([buildInformationMessage()]);
 };
 

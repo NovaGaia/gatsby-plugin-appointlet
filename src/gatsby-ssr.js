@@ -44,14 +44,51 @@ const scriptAppointlet = React.createElement(`script`, {
 })
 
 // <link href="https://js.appointlet.com/styles.css" rel="stylesheet" />
-const styleAppointlet = React.createElement(`style`, {
+const styleAppointlet = React.createElement(`link`, {
   key: 'styleAppointlet',
   id: 'styleAppointlet',
   rel: 'stylesheet',
   href: '//js.appointlet.com/styles.css',
 })
 
+// Lighthouse recommends pre-connecting
+const preconnectStyleAppointlet =
+  ((
+    <link
+      rel="preconnect"
+      key="preconnect-style-appointlet"
+      href="//js.appointlet.com/styles.css"
+    />
+  ),
+  (
+    <link
+      rel="dns-prefetch"
+      key="dns-prefetch-style-appointlet"
+      href="//js.appointlet.com/styles.css"
+    />
+  ))
+const preconnectScriptAppointlet =
+  ((
+    <link
+      rel="preconnect"
+      key="preconnect-script-appointlet"
+      href="//js.appointlet.com"
+    />
+  ),
+  (
+    <link
+      rel="dns-prefetch"
+      key="dns-prefetch-script-appointlet"
+      href="//js.appointlet.com"
+    />
+  ))
+
 export const onRenderBody = ({ setPostBodyComponents, setHeadComponents }) => {
-  setHeadComponents([scriptAppointlet, styleAppointlet])
+  setHeadComponents([
+    preconnectStyleAppointlet,
+    preconnectScriptAppointlet,
+    scriptAppointlet,
+    styleAppointlet,
+  ])
   setPostBodyComponents([buildInformationMessage()])
 }

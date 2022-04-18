@@ -19,42 +19,38 @@ function AppointletButton(_ref) {
       props = (0, _objectWithoutPropertiesLoose2.default)(_ref, _excluded);
   var CustomTag = tag || 'button';
   var scheduling_page_URL = process.env.GATSBY_APPOINTLET_URL;
-  var appointlet = null;
 
-  try {
-    eval(Appointlet);
-  } catch (e) {
-    console.error(e);
-    return /*#__PURE__*/_react.default.createElement("span", {
-      style: {
-        color: 'red'
-      }
-    }, "error on Appointlet");
-  }
+  if (typeof document !== 'undefined') {
+    var appointlet = new Appointlet(scheduling_page_URL);
 
-  appointlet = new Appointlet(scheduling_page_URL);
-
-  if (scheduling_page_URL === '' || scheduling_page_URL === undefined) {
-    return /*#__PURE__*/_react.default.createElement("span", {
-      style: {
-        color: 'red'
-      }
-    }, "Env var `GATSBY_APPOINTLET_URL` is undefined !");
-  }
-
-  if (appointlet === null) {
-    return /*#__PURE__*/_react.default.createElement("span", {
-      style: {
-        color: 'red'
-      }
-    }, "error on Appointlet");
-  }
-
-  return /*#__PURE__*/_react.default.createElement(CustomTag, (0, _extends2.default)({}, props, {
-    onClick: function onClick() {
-      return appointlet.openModal();
+    if (scheduling_page_URL === '' || scheduling_page_URL === undefined) {
+      return /*#__PURE__*/_react.default.createElement("span", {
+        style: {
+          color: 'red'
+        }
+      }, "Env var `GATSBY_APPOINTLET_URL` is undefined !");
     }
-  }), children || 'Appointlet rendez-vous');
+
+    if (appointlet === null) {
+      return /*#__PURE__*/_react.default.createElement("span", {
+        style: {
+          color: 'red'
+        }
+      }, "error on Appointlet");
+    }
+
+    return /*#__PURE__*/_react.default.createElement(CustomTag, (0, _extends2.default)({}, props, {
+      onClick: function onClick() {
+        return appointlet.openModal();
+      }
+    }), children || 'Appointlet rendez-vous');
+  }
+
+  return /*#__PURE__*/_react.default.createElement("span", {
+    style: {
+      color: 'red'
+    }
+  }, "error on Appointlet");
 }
 
 var _default = AppointletButton;
