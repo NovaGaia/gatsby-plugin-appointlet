@@ -4,7 +4,7 @@ Gatsby plugin Appointlet Button for adding your booking page to your website.
 
 ### Changelog
 
-**More informations in [`HISTORY.md`](https://github.com/NovaGaia/gatsby-plugin-appointlet/blob/main/HISTORY.md)**
+**More informations in [`CHANGELOG.md`](https://github.com/NovaGaia/gatsby-plugin-appointlet/blob/main/CHANGELOG.md)**
 
 ## Installation
 
