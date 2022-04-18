@@ -29,7 +29,7 @@ module.exports = {
 
 Add import to your file :
 
-`import AppointletButton from 'gatsby-plugin-appointlet'`
+`import { AppointletButton } from 'gatsby-plugin-appointlet'`
 
 Add component to your file :
 
