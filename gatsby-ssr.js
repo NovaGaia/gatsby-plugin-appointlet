@@ -5,8 +5,6 @@ var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefau
 exports.__esModule = true;
 exports.onRenderBody = void 0;
 
-require("@appointlet/appointlet.js/dist/appointlet.min.css");
-
 var _react = _interopRequireDefault(require("react"));
 
 /**
@@ -14,7 +12,6 @@ var _react = _interopRequireDefault(require("react"));
  *
  * See: https://www.gatsbyjs.com/docs/ssr-apis/
  */
-// Check if window is defined (so if in the browser or in node.js).
 function buildInformationMessage() {
   if (process.env.GATSBY_APPOINTLET_URL !== undefined) {
     return /*#__PURE__*/_react.default.createElement("script", {
