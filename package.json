@@ -39,12 +39,10 @@
     "@babel/plugin-transform-runtime": "7.14.5",
     "@babel/preset-env": "7.14.7",
     "prettier": "2.1.2",
-    "release-it": "^14.14.2"
-  },
-  "dependencies": {
-    "@appointlet/appointlet.js": "^3.0.7",
+    "release-it": "^14.14.2",
     "babel-preset-gatsby-package": "^2.12.1"
   },
+  "dependencies": {},
   "peerDependencies": {
     "gatsby": "^3.0.0 || ^4.0.0",
     "react": "^17.0.2",

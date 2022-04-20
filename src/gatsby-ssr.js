@@ -3,8 +3,6 @@
  *
  * See: https://www.gatsbyjs.com/docs/ssr-apis/
  */
-// Check if window is defined (so if in the browser or in node.js).
-import '@appointlet/appointlet.js/dist/appointlet.min.css'
 
 import React from 'react'
 
