@@ -2,6 +2,11 @@
 
 Gatsby plugin Appointlet Button for adding your booking page to your website.
 
+![License](https://img.shields.io/github/license/NovaGaia/gatsby-plugin-appointlet?style=flat-square)
+![Version](https://img.shields.io/npm/v/gatsby-plugin-appointlet?style=flat-square)
+![Gatsby Version](https://img.shields.io/npm/dependency-version/NovaGaia/gatsby-plugin-appointlet/peer/gatsby?style=flat-square)
+![React Version](https://img.shields.io/github/package-json/dependency-version/NovaGaia/gatsby-plugin-appointlet/peer/react?style=flat-square)
+
 ### Changelog
 
 **More informations in [`CHANGELOG.md`](https://github.com/NovaGaia/gatsby-plugin-appointlet/blob/main/CHANGELOG.md)**
