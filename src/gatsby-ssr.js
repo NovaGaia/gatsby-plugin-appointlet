@@ -73,8 +73,8 @@ const preconnectStyleAppointlet =
     <link
       rel="preload"
       as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-      key="dns-prefetch-style-appointlet"
+      onLoad="this.onload=null;this.rel='stylesheet'"
+      key="preload-style-appointlet"
       href="//js.appointlet.com/styles.css"
     />
   ))
