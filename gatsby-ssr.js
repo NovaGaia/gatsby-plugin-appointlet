@@ -59,7 +59,7 @@ var preconnectStyleAppointlet = ( /*#__PURE__*/_react.default.createElement("lin
 }), /*#__PURE__*/_react.default.createElement("link", {
   rel: "preload",
   as: "style",
-  onLoad: "this.onload=null;this.rel='stylesheet'",
+  onLoad: "this.onload='all';this.rel='stylesheet'",
   key: "preload-style-appointlet",
   href: "//js.appointlet.com/styles.css"
 }));
