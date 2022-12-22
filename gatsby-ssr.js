@@ -40,12 +40,12 @@ var scriptAppointlet = /*#__PURE__*/_react.default.createElement("script", {
 }); // <link href="https://js.appointlet.com/styles.css" rel="stylesheet" />
 
 
-var styleAppointlet = /*#__PURE__*/_react.default.createElement("link", {
+var styleAppointlet = /*#__PURE__*/_react.default.createElement("noscript", null, /*#__PURE__*/_react.default.createElement("link", {
   key: 'styleAppointlet',
   id: 'styleAppointlet',
   rel: 'stylesheet',
   href: '//js.appointlet.com/styles.css'
-}); // Lighthouse recommends pre-connecting
+})); // Lighthouse recommends pre-connecting
 
 
 var preconnectStyleAppointlet = ( /*#__PURE__*/_react.default.createElement("link", {
@@ -54,6 +54,12 @@ var preconnectStyleAppointlet = ( /*#__PURE__*/_react.default.createElement("lin
   href: "//js.appointlet.com/styles.css"
 }), /*#__PURE__*/_react.default.createElement("link", {
   rel: "dns-prefetch",
+  key: "dns-prefetch-style-appointlet",
+  href: "//js.appointlet.com/styles.css"
+}), /*#__PURE__*/_react.default.createElement("link", {
+  rel: "preload",
+  as: "style",
+  onload: "this.onload=null;this.rel='stylesheet'",
   key: "dns-prefetch-style-appointlet",
   href: "//js.appointlet.com/styles.css"
 }));

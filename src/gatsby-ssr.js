@@ -42,12 +42,16 @@ const scriptAppointlet = React.createElement(`script`, {
 })
 
 // <link href="https://js.appointlet.com/styles.css" rel="stylesheet" />
-const styleAppointlet = React.createElement(`link`, {
-  key: 'styleAppointlet',
-  id: 'styleAppointlet',
-  rel: 'stylesheet',
-  href: '//js.appointlet.com/styles.css',
-})
+const styleAppointlet = React.createElement(
+  `noscript`,
+  null,
+  React.createElement(`link`, {
+    key: 'styleAppointlet',
+    id: 'styleAppointlet',
+    rel: 'stylesheet',
+    href: '//js.appointlet.com/styles.css',
+  })
+)
 
 // Lighthouse recommends pre-connecting
 const preconnectStyleAppointlet =
@@ -61,6 +65,15 @@ const preconnectStyleAppointlet =
   (
     <link
       rel="dns-prefetch"
+      key="dns-prefetch-style-appointlet"
+      href="//js.appointlet.com/styles.css"
+    />
+  ),
+  (
+    <link
+      rel="preload"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
       key="dns-prefetch-style-appointlet"
       href="//js.appointlet.com/styles.css"
     />
